@@ -56,6 +56,8 @@ We can of course combine all of the above into a single line.
 document.querySelectorAll('#assignment1 p')[2].style.color = '#f00'
 ```
 
+---
+
 # Assignment 2
 
 > Append a child element for each `<div>` with a class of child.
