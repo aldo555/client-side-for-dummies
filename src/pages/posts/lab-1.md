@@ -78,7 +78,7 @@ let futureParents = document.querySelectorAll('.child')
 Since there is more than one element selected, we need to iterate through them all and for that we will use a `for` loop.
 
 ```javascript
-for (let i = 0; i < futureParents; i++) {
+for (let i = 0; i < futureParents.length; i++) {
   // create a new element
   // put some text inside it for good measure
   // append it to the parent
@@ -103,7 +103,7 @@ Let's put everything together.
 ```javascript
 let futureParents = document.querySelectorAll('.child')
 
-for (let i = 0; i < futureParents; i++) {
+for (let i = 0; i < futureParents.length; i++) {
   let child = document.createElement('p')
   child.innerText = 👶
   futureParents[i].appendChild(child)
@@ -159,3 +159,71 @@ document.querySelector('#sub-nav').closest('.primary-nav').style = 'font-size: 2
 # Assignment 4
 
 > Remove all *childs* of any `<div>` with a class of remove.
+
+The HTML:
+
+```html
+<div>
+    <p>I'm a div</p>
+</div>
+<div class="remove">
+    <p>I'm a div with a class of remove</p>
+</div>
+<div class="remove">
+    <p>I'm a div with a class of remove</p>
+</div>
+<div>
+    <p>I'm a div</p>
+    <div class="remove">
+        <p>I'm a div with a class of remove</p>
+    </div>
+</div>
+```
+
+You can notice in the code above that all the divs with the class of remove have a single child that is a paragraph so we can go ahead and select them.
+
+```javascript
+let toBeKilled = document.querySelectorAll('.remove p')
+```
+
+To remove them we have to iterate over all of the elements that are on death row and use the function `remove`.
+
+```javascript
+for (i = 0; i < toBeKilled.length; i++) {
+  toBeKilled[i].remove()
+}
+```
+
+# Assignment 5
+
+> Find the `<div>` with the class hidden and remove that class to find out what's inside it.
+
+HTML looks like this:
+
+```html
+<div class="item_not_hidden hidden">
+    <img src="img/hidden.jpg" alt="">
+</div>
+```
+
+Of course we start by selecting the element with the class hidden.
+
+```javascript
+let hiddenElement = document.querySelector('.hidden')
+```
+
+Now that we have it we can call upon the `classList` property which helps us deal with adding, removing or toggling classes.
+
+```javascript
+hiddenElement.classList.remove('hidden')
+```
+
+Everything on one line:
+
+```javascript
+document.querySelector('.hidden').classList.remove('hidden')
+```
+
+# Assignment 6
+
+> Create a filtering menu. The active filters should have a bolder font when clicked. The all filter shall only be bald when no other filters are selected and can't be bold when any other filters are selected.
