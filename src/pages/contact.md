@@ -1,11 +1,10 @@
 ---
-title: Get in Touch
-img_path: images/contact.jpg
+title: Contact
+img_path: ''
 menus:
   main:
-    title: Contact
-    weight: 6
+    title: ''
+    weight: ''
 template: contact
 ---
 
-Fill the form below to get in touch with me.
