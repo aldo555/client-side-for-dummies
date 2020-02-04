@@ -4,8 +4,8 @@ sections:
   - actions: []
     component: Intro
     content: >-
-      The most efficient way to get rid of all the bugs is to get rid of all the
-      code.
+      # The most efficient way to get rid of all the bugs is to get rid of all
+      the code.
     section_id: intro
     title: Intro
     type: intro
