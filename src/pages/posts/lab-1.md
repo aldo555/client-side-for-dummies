@@ -6,7 +6,7 @@ thumb_img_path: /images/960x0.jpg
 content_img_path: /images/960x0.jpg
 template: post
 ---
-## Assignment 1
+# Assignment 1
 
 > Find the third `<p>` and give that a red font colour.
 
@@ -54,6 +54,51 @@ We can of course combine all of the above into a single line.
 
 ```
 document.querySelectorAll('#assignment1 p')[2].style.color = '#f00'
+```
+
+# Assignment 2
+
+> Append a child element for each `<div>` with a class of child.
+
+To start we have to select all the elements that have the class of child.
+
+```
+let futureParents = document.querySelectorAll('.child')
+```
+
+Since there is more than one element selected, we need to iterate through them all and for that we will use a `for` loop.
+
+```
+for (let i = 0; i < futureParents; i++) {
+  // create a new element
+  // put some text inside it for good measure
+  // append it to the parent
+}
+```
+
+We will now create a new element and place some text inside of it.
+
+```
+let child = document.createElement('p')
+child.innerText = 👶
+```
+A new `<p>` tag has just been born, now we need to append it to our parent which is
+`futureParents[i]`, the current element in our iteration.
+
+```
+futureParents[i].appendChild(child)
+```
+
+Let's put everything together.
+
+```
+let futureParents = document.querySelectorAll('.child')
+
+for (let i = 0; i < futureParents; i++) {
+  let child = document.createElement('p')
+  child.innerText = 👶
+  futureParents[i].appendChild(child)
+}
 ```
 
 
