@@ -3,7 +3,9 @@ title: Home
 sections:
   - actions: []
     component: Intro
-    content: '### I understand nothing.'
+    content: >-
+      ### The most efficient way to get rid of all the bugs is to get rid of all
+      the software.
     section_id: intro
     title: Intro
     type: intro
