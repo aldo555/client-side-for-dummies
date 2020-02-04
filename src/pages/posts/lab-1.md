@@ -224,6 +224,155 @@ Everything on one line:
 document.querySelector('.hidden').classList.remove('hidden')
 ```
 
-# Assignment 6
+# Assignment 6 - Grade 4
 
 > Create a filtering menu. The active filters should have a bolder font when clicked. The all filter shall only be bald when no other filters are selected and can't be bold when any other filters are selected.
+
+Our HTML: 
+
+```html
+<div>
+    <span id="all" class="filter-item active">All</span>
+    <span class="filter-item">Jackets</span>
+    <span class="filter-item">Trousers</span>
+    <span class="filter-item">Hats</span>
+    <span class="filter-item">Shoes</span>
+</div>
+```
+
+This one is a little bit more complicated so let's begin by figuring out the logic of it all. There are 2 possibilities here, you can click on All and in this case every other filter goes back to normal and All becomes bold or you can click on any of the 4 filters in which case the one you clicked on becomes bold and the All filter goes back to normal.
+
+You might ask yourself by now how do you get the element that is clicked. This is where `this` come into play. In the case of an event such as a click, `this` refers to the element that received the event, meaning the one that is clicked.
+
+One more thing, the boldness is added by the class active which pre-existent.
+
+Now that we have an understanding of the problem let's begin solving it. Since we have two possibilities we have to use a conditional statement, an 'if'.
+
+```javascript
+if (this.id === 'all') {
+  // case when user has clicked the All button
+}
+else {
+  // case when user has clicked any other button
+}
+```
+
+In the first scenario when the user has clicked the All button, we need to make all other buttons go back to normal and the All button bold. We need to start off by selecting all the buttons excluding the All button of course.
+
+```javascript
+let buttons = document.querySelectorAll('.filter-item:not(#all)')
+```
+
+As you can tell we have used a bit of a strange syntax in order to exclude the All button but there is no need to remember it, just be ready to google it.
+
+To remove the boldness from all these buttons we need to remove the active class from all of them and we will do that by using a `for` loop and the `classList` property which we used in the previous assignment.
+
+```javascript
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].classList.remove('active')
+}
+```
+
+And now to add the active class to the All button:
+
+```javascript
+document.querySelector('#all').classList.add('active')
+```
+
+We are all done with the first case! Now in case the user has clicked on a button other then All we have to remove the active class from the All button and toggle the active class on the element that was just clicked.
+
+```javascript
+document.querySelector('#all').classList.remove('active')
+this.classList.toggle('active')
+```
+
+If we put everything together it should look like this:
+
+```javascript
+if (this.id === 'all') {
+  let buttons = document.querySelectorAll('.filter-item:not(#all)')
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active')
+  }
+  document.querySelector('#all').classList.add('active')
+}
+else {
+  document.querySelector('#all').classList.remove('active')
+  this.classList.toggle('active')
+}
+```
+
+# Assignment 7 - Grade 5
+
+>Make all the cats or dogs movable from one place to another.
+
+HTML, of course: 
+
+```html
+<div>
+  <div class="first">
+    <h3>First shelter</h3>
+    <p class="cat">😸</p>
+    <p class="cat">😸</p>
+    <p class="dog">🐶</p>
+  </div>
+  <div class="second">
+    <h3>Second shelter</h3>
+  </div>
+  <div class="third">
+    <h3>Third shelter</h3>
+  </div>
+
+  <button id="first_to_second_all" class="btn">Move all from first to second</button>
+  <button id="first_to_third_all" class="btn">Move all from first to third</button>
+  <button id="second_to_first_all" class="btn">Move all second to first</button>
+  <button id="only_cats_first_to_second" class="btn">Move only cats from first to second</button>
+  <button id="only_dogs_second_to_third" class="btn">Move only dogs from second to third</button>
+</div>
+```
+
+You should be happy to know this is a lot easier than assignment 6. I will only be covering one of the functions(move all from first shelter to the second shelter) since after that you can just copy and paste with very little changes.
+
+I'd like to start by adding the event listener for the click event.
+
+```javascript
+document.querySelector('#first_to_second_all').addEventListener('click', firstToSecondAll)
+```
+
+Now that the button is all hooked up we need to define our function.
+
+```javascript
+function firstToSecondAll() {
+  // animal movement
+}
+```
+
+We should select the animals from the first shelter and then also select the second shelter so we can later append them to it.
+
+```javascript
+let firstShelterAnimals = document.querySelectorAll('p')
+let secondShelter = document.querySelector('.second')
+```
+
+In order to append the animals to the second shelter we need to iterate through them and append them one by one using a `for` loop.
+
+```javascript
+for (let i = 0; i < firstShelterAnimals.length; i++) {
+  secondShelter.appendChild(firstShelterAnimals[i])
+}
+```
+
+Our function now looks like this: 
+
+```javascript
+function firstToSecondAll() {
+  let firstShelterAnimals = document.querySelectorAll('p')
+  let secondShelter = document.querySelector('.second')
+
+  for (let i = 0; i < firstShelterAnimals.length; i++) {
+    secondShelter.appendChild(firstShelterAnimals[i])
+  }
+}
+```
+
+I hope you got the idea by now since the other functions will only require minimal changes.
