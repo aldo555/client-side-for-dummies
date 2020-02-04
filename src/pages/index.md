@@ -3,7 +3,7 @@ title: Home
 sections:
   - actions: []
     component: Intro
-    content: '> ##### I understand nothing.'
+    content: '### I understand nothing.'
     section_id: intro
     title: Intro
     type: intro
