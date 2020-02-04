@@ -12,7 +12,7 @@ template: post
 
 First off we have to select the third `<p>`. If we look inside the HTML file we will find this:
 
-```javascript
+```html
 <div id="assignment1">
   <p>First</p>
   <p>Second</p>
@@ -56,11 +56,18 @@ We can of course combine all of the above into a single line.
 document.querySelectorAll('#assignment1 p')[2].style.color = '#f00'
 ```
 
-- - -
-
 # Assignment 2
 
 > Append a child element for each `<div>` with a class of child.
+
+The HTML looks like this: 
+
+```html
+<div><p>I'm a div</p></div>
+<div class="child"><p>I'm a div with a class of child</p></div>
+<div class="child"><p>I'm a div with a class of child</p></div>
+<div><p>I'm a div</p></div>
+```
 
 To start we have to select all the elements that have the class of child.
 
@@ -103,8 +110,52 @@ for (let i = 0; i < futureParents; i++) {
 }
 ```
 
-- - -
-
 # Assignment 3
 
-> Find the <ul> with an id of sub-nav and traverse up the DOM until you find a <ul> with a class of primary-nav and give it a font-size of 20px.
+> Find the `<ul>` with an id of sub-nav and traverse up the DOM until you find a `<ul>` with a class of primary-nav and give it a font-size of 20px.
+
+First off, this is what our HTML looks like: 
+
+```html
+<ul class="primary-nav">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third
+        <ul id="sub-nav">
+            <li>First sub</li>
+            <li>Second sub</li>
+            <li>Third sub</li>
+        </ul>
+    </li>
+    <li>Forth</li>
+    <li>Fifth</li>
+</ul>
+```
+
+Let's start by selecting the element with the id of sub-nav.
+
+```javascript
+let subNav = document.querySelector('#sub-nav)
+```
+
+Now we can traverse up the DOM by using the `closest` function. What this does is it looks for the closest element that meets a certain criteria(has a specific tag, class, id) by going up in the DOM tree(from parent to parent).
+
+```javascript
+let primaryNav = subNav.closest('.primary-nav')
+```
+
+And for the font-size:
+
+```javascript
+primaryNav.style = 'font-size: 20px'
+```
+
+Let's put all this together in one line.
+
+```javascript
+document.querySelector('#sub-nav').closest('.primary-nav').style = 'font-size: 20px'
+```
+
+# Assignment 4
+
+> Remove all *childs* of any `<div>` with a class of remove.
