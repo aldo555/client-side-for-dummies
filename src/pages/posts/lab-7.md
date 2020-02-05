@@ -18,6 +18,8 @@ You can now go ahead and download the HTML and CSS files. The JavaScript file is
 
 *Everything written below is assuming you use these files.*
 
+*P.S. If you don't see any red borders on the marbles it's because in the css file there is a typo, change `looser` to `loser`.
+
 # JavaScript
 
 I will not go over the requirements here since they can get confusing and at time they are not consistent with the solution provided. My recommendation is to go over them and then try to replicate the functionality found in the solution.
