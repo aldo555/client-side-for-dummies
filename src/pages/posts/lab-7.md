@@ -246,6 +246,9 @@ document.querySelector('#user_guess').focus()
 The whole thing looks like this:
 
 ```javascript
+let score = 0
+let guessesRemaining = 10
+
 function makeGuess(event) {
   event.preventDefault()
   
@@ -305,4 +308,93 @@ function makeGuess(event) {
   document.querySelector('#user_guess').value = ''
   document.querySelector('#user_guess').focus()
 }
+```
+
+# The final result
+
+```javascript
+function updateGuessedMarbles() {
+  const guess = document.querySelector('#user_guess').value
+  if (guess > 10) {
+   return  
+  }
+
+  const resultsContainer = document.querySelector('#results_container')
+  resultsContainer.innerHTML = ''
+  
+  for (let i = 1; i <= guess; i++) {
+    const marble = document.createElement('div')
+    marble.setAttribute('class', 'marble')
+    resultsContainer.appendChild(marble)
+  }
+}
+
+document.querySelector('#user_guess').addEventListener('input', updateGuessedMarbles)
+
+let score = 0
+let guessesRemaining = 10
+
+function makeGuess(event) {
+  event.preventDefault()
+  
+  if (guessesRemaining < 1) {
+    return
+  }
+
+  const guess = Number(document.querySelector('#user_guess').value)
+
+  if (!guess || guess < 1 || guess > 10) {
+    return
+  }
+  
+  const randomNumber = Math.floor(Math.random() * 10) + 1
+  
+  if (guess <= randomNumber) {
+    score += guess
+  }
+  guessesRemaining--
+  document.querySelector('#number_guesses').innerText = guessesRemaining
+  document.querySelector('#score').innerText = score
+  
+  const resultsContainer = document.querySelector('#results_container')
+  resultsContainer.innerHTML = ''
+  
+  let numberOfMarbles;
+  if (randomNumber >= guess) {
+    numberOfMarbles = randomNumber
+  }
+  else {
+    numberOfMarbles = guess
+  }
+
+  for(let i = 0; i < numberOfMarbles.length; i++) {
+    const marble = document.createElement('div')
+    marble.setAttribute('class', 'marble')
+    
+    if (i <= randomNumber) {
+      marble.classList.add('background')
+    }
+    
+    if (guess > randomNumber) {
+      marble.classList.add('loser')
+    }
+    else {
+      if (i <= guess) {
+        marble.classList.add('winner')
+      }
+      else {
+        marble.classList.add('loser')
+      }
+    }
+    
+    resultsContainer.appendChild(marble)
+  }
+  
+  document.querySelector('#user_guess').value = ''
+  document.querySelector('#user_guess').focus()
+}
+
+document.querySelector('#user_guess_form').addEventListener('submit', makeGuess)
+
+
 ```
