@@ -194,7 +194,7 @@ else {
   numberOfMarbles = guess
 }
 
-for(let i = 0; i < numberOfMarbles.length; i++) {
+for(let i = 0; i < numberOfMarbles; i++) {
   // fun stuff
 }
 ```
@@ -282,7 +282,7 @@ function makeGuess(event) {
     numberOfMarbles = guess
   }
 
-  for(let i = 0; i < numberOfMarbles.length; i++) {
+  for(let i = 0; i < numberOfMarbles; i++) {
     const marble = document.createElement('div')
     marble.setAttribute('class', 'marble')
     
@@ -367,7 +367,7 @@ function makeGuess(event) {
     numberOfMarbles = guess
   }
 
-  for(let i = 0; i < numberOfMarbles.length; i++) {
+  for(let i = 0; i < numberOfMarbles; i++) {
     const marble = document.createElement('div')
     marble.setAttribute('class', 'marble')
     
