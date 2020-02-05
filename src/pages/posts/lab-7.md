@@ -2,8 +2,8 @@
 title: Lab 7
 subtitle: Guessing Game
 date: 2020-02-05T10:35:31.024Z
-thumb_img_path: /images/by.jpeg
-content_img_path: /images/by.jpeg
+thumb_img_path: /images/J.J.-Abrams-explained-why-Baby-Yoda-is-the-heart-of.jpg
+content_img_path: /images/J.J.-Abrams-explained-why-Baby-Yoda-is-the-heart-of.jpg
 template: post
 ---
 # HTML & CSS the smart way
