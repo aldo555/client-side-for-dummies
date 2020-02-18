@@ -7,7 +7,7 @@ content_img_path: /images/madboi.jpg
 excerpt: The bane of my existence.
 template: post
 ---
-## First off, this assignment promotes a very bad and unintuitive use case for local storage and there is nothing to learn out of it. All this lab can do for you is manufacture confusion and frustration mostly because even the example websites in the PDF are very buggy.
+### First off, this assignment promotes a very bad and unintuitive use case for local storage and there is nothing to learn out of it. All this lab can do for you is manufacture confusion and frustration mostly because even the example websites in the PDF are very buggy.
 
 *The guide will be added soon&trade;.*
 
