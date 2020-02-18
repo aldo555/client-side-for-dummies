@@ -1,6 +1,6 @@
 ---
 title: Lab 8
-subtitle: The bane of my existence
+subtitle: The bane of my existence.
 date: 2020-02-18T20:53:21.963Z
 thumb_img_path: /images/madboi.jpg
 content_img_path: /images/madboi.jpg
