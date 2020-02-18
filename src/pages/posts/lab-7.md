@@ -211,7 +211,7 @@ marble.setAttribute('class', 'marble')
 Knowing that marbles that are lower or equals to the random number are filled(check images above if confused) we can now add the background.
 
 ```javascript
-if (i <= randomNumber) {
+if (i < randomNumber) {
   marble.classList.add('background')
 }
 ```
@@ -223,7 +223,7 @@ if (guess > randomNumber) {
     marble.classList.add('loser')
 }
 else {
-    if (i <= guess) {
+    if (i < guess) {
         marble.classList.add('winner')
     }
     else {
@@ -288,7 +288,7 @@ function makeGuess(event) {
     const marble = document.createElement('div')
     marble.setAttribute('class', 'marble')
     
-    if (i <= randomNumber) {
+    if (i < randomNumber) {
       marble.classList.add('background')
     }
     
@@ -296,7 +296,7 @@ function makeGuess(event) {
       marble.classList.add('loser')
     }
     else {
-      if (i <= guess) {
+      if (i < guess) {
         marble.classList.add('winner')
       }
       else {
@@ -373,7 +373,7 @@ function makeGuess(event) {
     const marble = document.createElement('div')
     marble.setAttribute('class', 'marble')
     
-    if (i <= randomNumber) {
+    if (i < randomNumber) {
       marble.classList.add('background')
     }
     
@@ -381,7 +381,7 @@ function makeGuess(event) {
       marble.classList.add('loser')
     }
     else {
-      if (i <= guess) {
+      if (i < guess) {
         marble.classList.add('winner')
       }
       else {
