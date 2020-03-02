@@ -11,10 +11,6 @@ template: post
 
 #### *The guide will be added soon&trade;.*
 
-[Custom foo description](#foo)
-
-### Foo
-
 Check the lab 7 post to see how to get the html and css files.
 
 ```javascript
