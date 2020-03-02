@@ -4,7 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-require("prismjs/themes/prism-solarizedlight.css")
+require("prismjs/themes/prism-okaidia.css")
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 
 exports.onInitialClientRender = () => {
     if ('onGatsbyInitialClientRender' in window && typeof window.onGatsbyInitialClientRender === 'function') {
