@@ -30,7 +30,7 @@ let paragraphs = document.querySelectorAll('#assignment1 p')
 We now have a `NodeList`(a collection of elements from the DOM, **not an array**, but we can access the elements inside it or iterate through them just like we would with an array) that holds all the paragraph tags and we can select the third one just like we would select the third element in an array.
 
 ```javascript
-thirdParagraph = paragraphs[2]
+let thirdParagraph = paragraphs[2]
 ```
 
 Now that we have our paragraph we only need to change the colour of the text inside of it.
