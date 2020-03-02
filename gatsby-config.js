@@ -43,6 +43,29 @@ module.exports = {
             options: {
                 trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none"
             }
-        }
+        },
+        {
+          resolve: `gatsby-transformer-remark`,
+          options: {
+            plugins: [
+              {
+                resolve: `gatsby-remark-prismjs`,
+                options: {
+                  classPrefix: "language-",
+                  inlineCodeMarker: null,
+                  aliases: {},
+                  showLineNumbers: false,
+                  noInlineHighlight: false,
+                  prompt: {
+                    user: "root",
+                    host: "localhost",
+                    global: false,
+                  },
+                  escapeEntities: {},
+                },
+              },
+            ],
+          },
+        },
     ]
 };

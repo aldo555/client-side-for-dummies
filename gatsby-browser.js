@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+ require("prismjs/themes/prism-solarizedlight.css")
+
 exports.onInitialClientRender = () => {
     if ('onGatsbyInitialClientRender' in window && typeof window.onGatsbyInitialClientRender === 'function') {
         window.onGatsbyInitialClientRender();
