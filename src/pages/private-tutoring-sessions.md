@@ -21,4 +21,4 @@ template: page
 
 ## Contact
 
-Reach me through my [website](https://findaldo.dev) or just send me a message on Facebook if you are interested.
+Reach me through my [website](https://findaldo.dev) or just [message](https://m.me/aldo.dumitrescu) me on Facebook if you are interested.
