@@ -10,6 +10,8 @@ template: post
 
 #### Check the lab 7 post to see how to get the html and css files.
 
+*Each section represents one of the functions and in some cases the functions are connected to each other. To see how everything ties up check the last section.*
+
 ## Toggling the form visibility
 
 To do this, we have to toggle the class `active` on the form container. Also, don't forget to add the event listener.
@@ -22,7 +24,7 @@ function toggleFormVisibility() {
 document.querySelector('#form_toggle').addEventListener('click', toggleFormVisibility)
 ```
 
-### Clear the form inputs
+## Clear the form inputs
 
 We can do this by setting the value of the inputs to an empty string.
 
