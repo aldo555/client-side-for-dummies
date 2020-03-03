@@ -15,5 +15,9 @@ template: page
 
 ## Pricing
 
-- Over the internet sessions - &euro;25 / h
-- In person sessions - &euro35 / h
+- Over the internet sessions - **&euro;20 / h**
+- In person sessions - **&euro;30 / h**
+
+## Contact
+
+Reach me through my [website](https://findaldo.dev) or just send me a message on Facebook if you are interested.
