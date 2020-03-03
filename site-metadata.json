@@ -5,7 +5,7 @@
   "header": {
     "title": "Client Side for Dummies",
     "logo_img": "",
-    "has_nav": false
+    "has_nav": true
   },
   "footer": {
     "content": "I understand nothing.",
