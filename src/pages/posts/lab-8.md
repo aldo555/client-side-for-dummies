@@ -7,13 +7,12 @@ content_img_path: /images/madboi.jpg
 excerpt: The bane of my existence.
 template: post
 ---
-## First off, this assignment promotes a very bad and unintuitive use case for local storage and there is nothing to learn out of it. All this lab can do for you is manufacture confusion and frustration mostly because even the example websites in the PDF are very buggy.
 
-#### *The guide will be added soon&trade;.*
+#### Check the lab 7 post to see how to get the html and css files.
 
-Check the lab 7 post to see how to get the html and css files.
+*Each section represents one of the functions and in some cases the functions are connected to each other. To see how everything ties up check the last section.*
 
-### Toggling the form visibility
+## Toggling the form visibility
 
 To do this, we have to toggle the class `active` on the form container. Also, don't forget to add the event listener.
 
@@ -25,7 +24,7 @@ function toggleFormVisibility() {
 document.querySelector('#form_toggle').addEventListener('click', toggleFormVisibility)
 ```
 
-### Clear the form inputs
+## Clear the form inputs
 
 We can do this by setting the value of the inputs to an empty string.
 
@@ -38,7 +37,7 @@ function clearFormInputs() {
 }
 ```
 
-### Checking if the inputs are valid
+## Checking if the inputs are valid
 
 > The form needs to be validated meaning that we do not allow numbers or special characters in neither the first, nor last name and the phone number shall only allow digits 0-9, +, and ().
 
@@ -58,7 +57,7 @@ Let's go over what is happening in the above code block.
 
 If all of our checks are good and we get back `true` from all of them then our `formIsValid` will also return `true`.
 
-### Getting all the contacts
+## Getting all the contacts
 
 We are storing all of our contacts inside of the local storage so in order to add, remove or edit a contact we first have to retrieve the list of contacts.
 
@@ -85,7 +84,7 @@ If we already have the contacts in our local storage we get them, if not we just
 
 This is called a **short-circuit evaluation** and you can read more about it [here](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c).
 
-### Adding a contact
+## Adding a contact
 
 Let's start with adding a contact.
 
@@ -124,7 +123,7 @@ After we have ensured the input is correct the user actually intends to add a co
 
 In the end we update the contact list so it also includes the new contact and we hide the form and clear the inputs by using the functions we went over in the first sections.
 
-### Updating the contacts
+## Updating the contacts
 
 Near the end of the add contact function we have used the `updateContacts` function so let's see what that does.
 
@@ -140,7 +139,7 @@ The function receives the contacts array as a parameter and takes that array and
 
 After the contacts are updated in the local storage we go ahead and call the `renderContacts` function that will display the updated contacts in the HTML.
 
-### Displaying the contacts
+## Displaying the contacts
 
 ```javascript
 function renderContacts() {
@@ -216,7 +215,7 @@ Everything is pretty clear here, we create the buttons, put the text inside them
 
 The weird part here is this `deleteButton.dataset.id = index`. By doing this we are attaching a reference to the button so we know what contact to delete when we press the button. To learn more about *data attributes** and the **dataset** i urge you to read [this](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
-### Removing a contact
+## Removing a contact
 
 ```javascript
 function deleteContact() {
@@ -229,7 +228,7 @@ function deleteContact() {
 
 All that we have to do here is get all the contacts, delete the contact at the index we get from the pressed button and then display the contacts again. If this seems confusing check the end of the previous section again.
 
-### Editing a contact
+## Editing a contact
 
 ```javascript
 function showEditForm() {
@@ -263,7 +262,7 @@ We also have to fill in all of the inputs with the information from the contact 
 
 Last thing, when you click edit on a contact you need to toggle the form's visibility, but if the form is already open you don't want to do that so that is why the last `if` statement is there.
 
-### Edit contact
+## Edit contact
 
 ```javascript
 function addContact() {
@@ -301,7 +300,7 @@ function editContact(index) {
 We get the index as a parameter so all we have to do is get all the contacts and modify the contact at that specific index using the value from the form inputs.
 After this, update the contacts, toggle the visibility of the form, clear the inputs and don't forget to change the text inside the button back.
 
-### Displaying the contacts when we open the website
+## Displaying the contacts when we open the website
 
 ```javascript
 document.addEventListener('DOMContentLoaded', renderContacts)
@@ -309,7 +308,9 @@ document.addEventListener('DOMContentLoaded', renderContacts)
 
 The `DOMContentLoaded` event is called your HTML is fully loaded and that is a great moment for us to display the contacts.
 
-And we're done. All the code is tied up in the below section. Good job. I guess.
+And we're done. Good job. I guess.
+
+## Everything put together
 
 ```javascript
 function toggleFormVisibility() {
