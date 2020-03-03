@@ -276,30 +276,6 @@ models:
         name: menus
         label: Home Menus
         description: Which menus should this page show up in
-  contact:
-    type: page
-    label: Contact
-    template: contact
-    file: contact.md
-    singleInstance: true
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the page.
-        required: true
-      - type: string
-        name: subtitle
-        label: Subtitle
-        description: The text shown just below the page title.
-      - type: image
-        name: img_path
-        label: Image
-        description: The image shown below the page title and subtitle.
-      - type: page_menus
-        name: menus
-        label: Contact Menus
-        description: Which menus should this page show up in
   page:
     type: page
     label: Page
