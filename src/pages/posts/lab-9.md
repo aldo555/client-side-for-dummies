@@ -187,7 +187,7 @@ async function fetchUserPost (userId) {
 async function fetchPosts () {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts')
   const data = await response.json()
-  return [...data.slice(0, 10)];
+  return data.slice(0, 10)
 }
 
 function renderUsers (users) {
