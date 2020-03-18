@@ -7,7 +7,15 @@ template: post
 ---
 ## The video
 
-Because of its complexity and the amount of stuff I have to explain I have decided to do a video guide for this lab. You can still find all the code you need in this post but for in depth explanations you have to [follow this link](https://google.com).
+Because of its complexity and the amount of stuff I have to explain I have decided to do a video guide for this lab. You can still find all the code you need in this post but for in depth explanations you have to [follow this link](https://www.youtube.com/watch?v=IOXjf_hpB6Q&feature=youtu.be).
+
+## Links to the stuff I talk about
+
+* [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+* [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+* [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+* [Template literals/String interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+* [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
 ## The HTML
 
