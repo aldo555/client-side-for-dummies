@@ -7,7 +7,7 @@ template: post
 ---
 ## The video
 
-Because of its complexity and the amount of stuff I have to explain I have decided to do a video guide for this lab. You can still find all the code you need in this post but for in depth explanations you have to [follow this link](https://google.com).
+Because of its complexity and the amount of stuff I have to explain I have decided to do a video guide for this lab. You can still find all the code you need in this post but for in depth explanations you have to [follow this link](https://youtu.be/BsdRxqgGGfA).
 
 ## Links to the stuff I talk about
 
